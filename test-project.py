@@ -36,3 +36,41 @@
 # print("\n\nGrade is: " + grade)
 
 
+
+# def checkio(data: str) -> bool:
+#
+#     #replace this for solution
+#     return True or False
+#
+# #Some hints
+# #Just check all conditions
+
+
+# if __name__ == '__main__':
+#     #These "asserts" using only for self-checking and not necessary for auto-testing
+#     assert checkio('A1213pokl') == False, "1st example"
+#     assert checkio('bAse730onE4') == True, "2nd example"
+#     assert checkio('asasasasasasasaas') == False, "3rd example"
+#     assert checkio('QWERTYqwerty') == False, "4th example"
+#     assert checkio('123456123456') == False, "5th example"
+#     assert checkio('QwErTy911poqqqq') == True, "6th example"
+#     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+
+
+# while loops repeat code because true will always be true. Therefore the code will always repeat
+
+totalScore = 0
+scoreCount = 0
+
+while True:
+    score = input("Enter a score here. (type 'end' to end)\n")
+    if score == 'end':
+        average = totalScore / scoreCount
+        print("Your average is", round(average,2))
+        break
+    score = int(score)
+    totalScore += score
+    scoreCount += 1
+
+
+
