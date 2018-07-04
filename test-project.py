@@ -70,7 +70,4 @@ while True:
         break
     score = int(score)
     totalScore += score
-    scoreCount += 1
-
-
-
+scoreCount += 1
