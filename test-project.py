@@ -37,40 +37,72 @@
 
 
 
-# def checkio(data: str) -> bool:
-#
-#     #replace this for solution
-#     return True or False
-#
-# #Some hints
-# #Just check all conditions
-
-
-# if __name__ == '__main__':
-#     #These "asserts" using only for self-checking and not necessary for auto-testing
-#     assert checkio('A1213pokl') == False, "1st example"
-#     assert checkio('bAse730onE4') == True, "2nd example"
-#     assert checkio('asasasasasasasaas') == False, "3rd example"
-#     assert checkio('QWERTYqwerty') == False, "4th example"
-#     assert checkio('123456123456') == False, "5th example"
-#     assert checkio('QwErTy911poqqqq') == True, "6th example"
-#     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-
-
 # while loops repeat code because true will always be true. Therefore the code will always repeat
 
-totalScore = 0
-scoreCount = 0
+# totalScore = 0
+# scoreCount = 0
+#
+# while True:
+#     score = input("Enter a score here. (type 'end' to end)\n")
+#     if score == 'end':
+#         average = totalScore / scoreCount
+#         print("Your average is", round(average,2))
+#         break
+#     score = int(score)
+#     totalScore += score
+#     scoreCount += 1
 
-while True:
-    score = input("Enter a score here. (type 'end' to end)\n")
-    if score == 'end':
-        average = totalScore / scoreCount
-        print("Your average is", round(average,2))
-        break
-    score = int(score)
-    totalScore += score
-    scoreCount += 1
 
+
+
+# print("This is the start of the program")
+# answer = 'y'
+# while answer == 'y' or answer == 'Y':
+#     print("This is a statement from within the while loop")
+#     print("And some more stuff from within the while loop")
+#     answer = input("Do you want to run this program again? y/n\n")
+# print("Goodbye.")
+
+
+
+
+# This is how these functions are set up, I guess
+
+# def many_greetings_with_name(n, the_name):
+#     for i in range(n):
+#         print("Hello Again" + the_name + "!")
+#
+# x = int(input("How many greetings do you want?: "))
+# many_greetings_with_name(x, " lololo")
+
+
+
+
+# This explains what the first variable in 'for x in range whatever' can do
+
+# def cube( y ):
+#     return y * y * y
+# for x in range (1,5):
+#     print(cube(x))
+# print(f"The last value of x is {x}")
+
+def cube( y ):
+    return y * y * y
+def doubleIt(z):
+    return 2 * z
+
+print("1 to 5 cubed")
+for x in range (1,6):
+    print (cube(x),)
+print()
+print()
+
+print ("1 to 5 doubled")
+for x in range (1,6):
+    print(doubleIt(x),)
+
+# So, basically... for x in range (1-6): >>> x becomes one through five. So When it says print(cube(x)) below, you have
+# x = 1
+# print(cube(x))
 
 
