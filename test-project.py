@@ -18,6 +18,8 @@
 
 
 
+
+
 # score = input("Etner a score:")
 # score = int(score)
 # if score >= 80:
@@ -34,6 +36,9 @@
 #             else:
 #                 grade= 'Fail'
 # print("\n\nGrade is: " + grade)
+
+
+
 
 
 
@@ -66,6 +71,7 @@
 
 
 
+
 # This is how these functions are set up, I guess
 
 # def many_greetings_with_name(n, the_name):
@@ -78,6 +84,7 @@
 
 
 
+
 # This explains what the first variable in 'for x in range whatever' can do
 
 # def cube( y ):
@@ -86,23 +93,97 @@
 #     print(cube(x))
 # print(f"The last value of x is {x}")
 
-def cube( y ):
-    return y * y * y
-def doubleIt(z):
-    return 2 * z
-
-print("1 to 5 cubed")
-for x in range (1,6):
-    print (cube(x),)
-print()
-print()
-
-print ("1 to 5 doubled")
-for x in range (1,6):
-    print(doubleIt(x),)
+# def cube( y ):
+#     return y * y * y
+# def doubleIt(z):
+#     return 2 * z
+#
+# print("1 to 5 cubed")
+# for x in range (1,6):
+#     print (cube(x),)
+# print()
+# print()
+#
+# print ("1 to 5 doubled")
+# for x in range (1,6):
+#     print(doubleIt(x),)
 
 # So, basically... for x in range (1-6): >>> x becomes one through five. So When it says print(cube(x)) below, you have
 # x = 1
 # print(cube(x))
+
+
+
+#importing from another file in the same project folder
+# import myFunctions
+#
+# print ("1 to 5 cubed")
+# for x in range (1,6):
+#     print (myFunctions.cube(x))
+# print()
+# print()
+# print("1 to 5 doubled")
+# for x in range (1,6):
+#     print (myFunctions.doubleIt(x),)
+
+
+
+'''
+def pause():
+    input("\n\nPress any key to continue...\n\n")
+
+
+def quit_message():
+    print("Thank you for using this program")
+    print("Goodbye")
+
+
+def print_three_lines():
+    for i in range(1, 4):
+        print("This is line" + str(i))
+
+
+def print_nine_lines():
+    for i in range(1, 4):
+        print_three_lines()
+
+
+def start_message():
+    print("This program demonstrates the use of python functions")
+    pause()
+
+
+def blank_line():
+    print()
+
+
+def clear_screen():
+    for i in range (1, 26):
+        blank_line()
+
+
+start_message()
+clear_screen()
+print("testing this program")
+print_nine_lines()
+pause()
+clear_screen()
+print_nine_lines()
+blank_line()
+print_nine_lines()
+pause()
+clear_screen()
+quit_message()
+
+'''
+
+
+
+
+
+
+
+
+
 
 
