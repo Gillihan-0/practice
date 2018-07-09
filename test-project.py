@@ -128,62 +128,43 @@
 
 
 
-'''
-def pause():
-    input("\n\nPress any key to continue...\n\n")
-
-
-def quit_message():
-    print("Thank you for using this program")
-    print("Goodbye")
-
-
-def print_three_lines():
-    for i in range(1, 4):
-        print("This is line" + str(i))
-
-
-def print_nine_lines():
-    for i in range(1, 4):
-        print_three_lines()
-
-
-def start_message():
-    print("This program demonstrates the use of python functions")
-    pause()
-
-
-def blank_line():
-    print()
-
-
-def clear_screen():
-    for i in range (1, 26):
-        blank_line()
-
-
-start_message()
-clear_screen()
-print("testing this program")
-print_nine_lines()
-pause()
-clear_screen()
-print_nine_lines()
-blank_line()
-print_nine_lines()
-pause()
-clear_screen()
-quit_message()
-
-'''
+# # creating and using python lists
+# result = [0, 0, 0, 0, 0, 0, 0, 0]
+# print(result)
+# result[0] = 75
+# result[1] = 90
+# result[4] = 72
+# print(result)
+# print(result[0])
+# print(result[1])
+# print(result[2])
+# print(result[3])
+# print(result[4])
+# print(result[5])
+# print(result[6])
+# print(result[7])
 
 
 
+# # demonstrates rows and columns on lists?
+# tictactoe = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+# print(tictactoe[0])
+# print(tictactoe[1])
+# print(tictactoe[2])
+# print(tictactoe[3])
+#
+# print(tictactoe[3][1])
+#
+# row = 1
+# column = 0
+# the_value = (tictactoe[row][column])
+# print(f"Row {row} column {column} has a value of {the_value}")
 
 
 
+s1 = 'spam and eggs'
+s1.replace('and', 'without')
+print(s1)
 
-
-
-
-
+s2 = s1.replace('and', 'without')
+print(s2)
