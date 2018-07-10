@@ -128,6 +128,8 @@
 
 
 
+
+
 # # creating and using python lists
 # result = [0, 0, 0, 0, 0, 0, 0, 0]
 # print(result)
@@ -143,6 +145,7 @@
 # print(result[5])
 # print(result[6])
 # print(result[7])
+
 
 
 
@@ -162,9 +165,113 @@
 
 
 
-s1 = 'spam and eggs'
-s1.replace('and', 'without')
-print(s1)
 
-s2 = s1.replace('and', 'without')
-print(s2)
+# # for every character in a string...
+# s = 'steven was here'
+# for c in s:
+#     if c == 'e':
+#         print(c, end="000")
+#     else:
+#         print(c, end="")
+# print()
+# print('bill' in s)
+# print('steven' in s)
+# print(' ' in s, end=" ")
+# print('x' in s)
+
+
+
+# # DOING STUFF TO FILES WOOOOOOOOOOO
+
+# 'r' is read
+# 'w' is write
+# {filename}.open
+# {filename}.write
+# {filename}.close
+# {filename}.read
+# {filename}.readline
+
+
+# file1 = open('C:\\Users\\sgillihan\\Documents\\doc1.txt','r')
+# # the line above opens C:\temp\file1.txt for reading
+# string = file1.readline()
+# print (string)
+
+
+# file1 = open('C:\\Users\\Sgillihan\\Documents\\doc1.txt', 'w')
+# print(file1)
+# file1.write("Today is Tuesday\n")
+# file1.write("Tomorrow is Wednesday")
+# file1.close()
+
+# file2 = open('C:\\users\\sgillihan\\documents\\doc1.txt', 'r')
+# print(file2)
+# string1 = file2.read()
+# print(string1)
+# file2.close()
+# file2 = open('c:\\users\\sgillihan\\documents\\doc1.txt', 'r')
+# string1 = file2.read(5)
+# print (string1)
+# string1 = file2.read(5)
+# print (string1)
+# string1 = file2.read(5)
+# print (string1)
+# file2.close()
+
+
+# def copy_file(oldFile, newFile):
+#     f1 = open(oldFile, "r")
+#     f2 = open(newFile, "w")
+#     while 1:
+#         text = f1.read(50)
+#         if text == "":
+#             break
+#         f2.write(text)
+#     f1.close()
+#     f2.close()
+#     return
+#
+# filecopy = "c:\\users\\sgillihan\\documents\\doc1copy.txt"
+# fileold = "c:\\users\\sgillihan\\documents\\doc1.txt"
+# copy_file(fileold, filecopy)
+#
+
+
+# filename = input('Enter a file name: ')
+# try:
+#   f = open (filename, "r")
+# except:
+#   print ('There is no file named', filename )
+
+
+
+
+# list1= [14, 15, 16, 17]
+# goodnumber = int(input("How many years does it have?\n"))
+# found = 0
+# for i in list1:
+#     if goodnumber == i:
+#         print("Very good")
+#         found = 1
+# if found == 0:
+#     print("Not good enough")
+#
+
+
+mylist = [10, 11, 3, 4, 55, 12, 23, 14, 16]
+n = len(mylist)
+print(n)
+for i in range (n):
+    print(mylist[i], end=" ")
+search = int(input("\nPlease enter a number to search for: "))
+print(search)
+found = False
+for i in range(n):
+    if mylist[i] == search:
+        found = True
+        index = i
+print()
+if found == True:
+    print(f"{search} found at index {index}")
+else:
+    print("Search not found")
