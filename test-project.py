@@ -246,7 +246,7 @@
 
 
 
-# list1= [14, 15, 16, 17]
+# list1= [14, 15, 16, 17, 18, 19, 20, 21]
 # goodnumber = int(input("How many years does it have?\n"))
 # found = 0
 # for i in list1:
@@ -255,23 +255,51 @@
 #         found = 1
 # if found == 0:
 #     print("Not good enough")
-#
 
 
-mylist = [10, 11, 3, 4, 55, 12, 23, 14, 16]
-n = len(mylist)
-print(n)
-for i in range (n):
-    print(mylist[i], end=" ")
-search = int(input("\nPlease enter a number to search for: "))
-print(search)
-found = False
-for i in range(n):
-    if mylist[i] == search:
-        found = True
-        index = i
-print()
-if found == True:
-    print(f"{search} found at index {index}")
-else:
-    print("Search not found")
+
+
+# mylist = [10, 11, 12, 13, 14]
+# n = len(mylist)
+# print(n)
+# for i in range(n):
+#     print(mylist[i], end=" ")
+# search = int(input("\nPlease enter a number to search for: "))
+# print(search)
+# found = False
+# for i in range(n):
+#     if mylist[i] == search:
+#         found = True
+#         index = i
+# print()
+# if found == True:
+#     print(f"{search} found at index {index}")
+# else:
+#     print("Not found")
+
+
+
+# This averages a list
+list1 = [11, 27, 36, 44, 51, 22, 65, 1, 78]
+tally = 0
+for i in list1:
+    tally += i
+print(tally)
+numberOfThem = len(list1)
+total = tally / numberOfThem
+total = round(total)
+print(total)
+
+# This searches an array
+list = [12, 654, 234, 632, 23, 16, 754]
+theNumber = int(input("Enter a number to search for in the list:"))
+print(type(theNumber))
+for i in list:
+    if theNumber == i:
+        print("Good job, you found one.")
+        break
+    else:
+        print("You did not find one")
+        break
+
+
