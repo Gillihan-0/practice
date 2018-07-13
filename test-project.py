@@ -234,7 +234,8 @@
 # filecopy = "c:\\users\\sgillihan\\documents\\doc1copy.txt"
 # fileold = "c:\\users\\sgillihan\\documents\\doc1.txt"
 # copy_file(fileold, filecopy)
-#
+
+
 
 
 # filename = input('Enter a file name: ')
@@ -259,47 +260,119 @@
 
 
 
-# mylist = [10, 11, 12, 13, 14]
-# n = len(mylist)
-# print(n)
-# for i in range(n):
-#     print(mylist[i], end=" ")
-# search = int(input("\nPlease enter a number to search for: "))
-# print(search)
-# found = False
-# for i in range(n):
-#     if mylist[i] == search:
-#         found = True
-#         index = i
-# print()
-# if found == True:
-#     print(f"{search} found at index {index}")
-# else:
-#     print("Not found")
+# def theFunc():
+#     myList=[1, 3, 5, 7, 10, 20, 30, 40]
+#     n = len(myList)
+#     search = int(input("\nPlease enter a number to search for: "))
+#     found = False
+#     for i in range(n):
+#         if myList[i] == search:
+#             found = True
+#             index = i
+#     print()
+#     if found == True:
+#         tryAgain = input((f"You found {search} at index {index}. Try again? y/n?"))
+#         if tryAgain == 'y':
+#             theFunc()
+#         else:
+#             quit(0)
+#     else:
+#         print("Search not found. Try again.")
+#         theFunc()
+# theFunc()
 
 
 
-# This averages a list
-list1 = [11, 27, 36, 44, 51, 22, 65, 1, 78]
-tally = 0
-for i in list1:
-    tally += i
-print(tally)
-numberOfThem = len(list1)
-total = tally / numberOfThem
-total = round(total)
-print(total)
+# import random
+# numberslist = []
+# number = 0
+# while number < 10000:
+#     value = random.randint(1,20000)
+#     if not(value in numberslist):
+#         numberslist.append(value)
+#         number += 1
+# print(numberslist)
 
-# This searches an array
-list = [12, 654, 234, 632, 23, 16, 754]
-theNumber = int(input("Enter a number to search for in the list:"))
-print(type(theNumber))
-for i in list:
-    if theNumber == i:
-        print("Good job, you found one.")
-        break
+
+
+
+# import random
+#
+# # define the bubble sort function
+# def sort(values):
+#    length = len(values)
+#    for time in range(0, length-1):
+#       for position in range(0, (length-time-1)):
+#          if values[position] > values[position+1]:
+#             values[position], values[position+1] = values[position+1], values[position]
+#
+# # generate a list of ten random numbers
+# numbers = []
+# number = 0
+# while number < 10:
+#    value = random.randint(1,100)
+#    if not(value in numbers):
+#       numbers.append(value)
+#       number = number + 1
+#
+# # show unsorted list, sort the list, and show sorted list
+# print ("Before:", numbers)
+# sort(numbers)
+# print ("After :", numbers)
+
+
+# MY PROGRAMS ----------------------------------------------------------------------------------------------------------
+
+# Dice Roller
+import random
+
+
+def rollDice(sides):
+    dice = random.randint(1, sides)
+    print()
+    print(f"--= [{dice}] =--")
+    print()
+    init(sides)
+
+
+def init(sides):
+    command = input("[R]oll the dice, [C]hange die or [Q]uit.")
+    if command == 'r' or command == 'R':
+        rollDice(sides)
+    elif command == 'c' or command == 'C':
+        print()
+        choseSides()
+    elif command == 'q' or command == 'Q':
+        print("Thanks for using Dicey's Ultimate Dice Thrower.")
+        quit()
     else:
-        print("You did not find one")
-        break
+        print()
+        print("Invalid input. Try again.")
+        print()
+        init(sides)
+
+
+def choseSides():
+    try:
+        sides = int(input("How many faces are on your die?"))
+        if sides > 0:
+            print()
+            init(sides)
+        else:
+            print()
+            print("Your (non-existent) die was eaten by a grue. You have lost.")
+            quit()
+    except ValueError:
+        print()
+        print("Invalid input. Sides must be an integer. Try again.")
+        print()
+        choseSides()
+
+
+
+
+
+print("Welcome to Dicey's Ultimate Dice Thrower.")
+choseSides()
 
 
