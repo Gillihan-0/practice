@@ -324,55 +324,58 @@
 # MY PROGRAMS ----------------------------------------------------------------------------------------------------------
 
 # Dice Roller
-import random
+# import random
+#
+#
+# def rollDice(sides):
+#     dice = random.randint(1, sides)
+#     print()
+#     print(f"--= [{dice}] =--")
+#     print()
+#     init(sides)
+#
+#
+# def init(sides):
+#     command = input("[R]oll the dice, [C]hange die or [Q]uit.")
+#     if command == 'r' or command == 'R':
+#         rollDice(sides)
+#     elif command == 'c' or command == 'C':
+#         print()
+#         choseSides()
+#     elif command == 'q' or command == 'Q':
+#         print("Thanks for using Dicey's Ultimate Dice Thrower.")
+#         quit()
+#     else:
+#         print()
+#         print("Invalid input. Try again.")
+#         print()
+#         init(sides)
+#
+#
+# def choseSides():
+#     try:
+#         sides = int(input("How many faces are on your die?"))
+#         if sides > 0:
+#             print()
+#             init(sides)
+#         else:
+#             print()
+#             print("Your (non-existent) die was eaten by a grue. You have lost.")
+#             quit()
+#     except ValueError:
+#         print()
+#         print("Invalid input. Sides must be an integer. Try again.")
+#         print()
+#         choseSides()
+#
+#
+#
+#
+#
+# print("Welcome to Dicey's Ultimate Dice Thrower.")
+# choseSides()
 
 
-def rollDice(sides):
-    dice = random.randint(1, sides)
-    print()
-    print(f"--= [{dice}] =--")
-    print()
-    init(sides)
+from diceroller import rollDice
 
-
-def init(sides):
-    command = input("[R]oll the dice, [C]hange die or [Q]uit.")
-    if command == 'r' or command == 'R':
-        rollDice(sides)
-    elif command == 'c' or command == 'C':
-        print()
-        choseSides()
-    elif command == 'q' or command == 'Q':
-        print("Thanks for using Dicey's Ultimate Dice Thrower.")
-        quit()
-    else:
-        print()
-        print("Invalid input. Try again.")
-        print()
-        init(sides)
-
-
-def choseSides():
-    try:
-        sides = int(input("How many faces are on your die?"))
-        if sides > 0:
-            print()
-            init(sides)
-        else:
-            print()
-            print("Your (non-existent) die was eaten by a grue. You have lost.")
-            quit()
-    except ValueError:
-        print()
-        print("Invalid input. Sides must be an integer. Try again.")
-        print()
-        choseSides()
-
-
-
-
-
-print("Welcome to Dicey's Ultimate Dice Thrower.")
-choseSides()
-
-
+print(rollDice(4,6))

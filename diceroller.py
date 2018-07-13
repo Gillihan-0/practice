@@ -11,7 +11,7 @@ def rollDice(dice, sides):
         print()
         print(f"--= [{die}] =--")
     print()
-    print(f"The dice total {total}")
+    return total
 
 
 if __name__ == "__main__":
@@ -24,7 +24,8 @@ if __name__ == "__main__":
         print()
         command = input("[R]oll the dice, [C]hange die or [Q]uit.\n")
         if command == 'r' or command == 'R':
-            rollDice(dice, sides)
+            dicetotal = rollDice(dice, sides)
+            print(f"The dice total {dicetotal}")
         elif command == 'c' or command == 'C':
             try:
                 sides = int(input("How many faces are on your die?\n"))
