@@ -296,29 +296,19 @@
 
 
 
-# import random
-#
-# # define the bubble sort function
-# def sort(values):
-#    length = len(values)
-#    for time in range(0, length-1):
-#       for position in range(0, (length-time-1)):
-#          if values[position] > values[position+1]:
-#             values[position], values[position+1] = values[position+1], values[position]
-#
-# # generate a list of ten random numbers
-# numbers = []
-# number = 0
-# while number < 10:
-#    value = random.randint(1,100)
-#    if not(value in numbers):
-#       numbers.append(value)
-#       number = number + 1
-#
-# # show unsorted list, sort the list, and show sorted list
-# print ("Before:", numbers)
-# sort(numbers)
-# print ("After :", numbers)
+
+# The reason that this works is because when we run this function, "return" has not resolved. It will resolve
+# when n == 0
+# the reason
+
+
+
+
+
+
+
+
+
 
 
 # MY PROGRAMS ----------------------------------------------------------------------------------------------------------
@@ -375,7 +365,17 @@
 # print("Welcome to Dicey's Ultimate Dice Thrower.")
 # choseSides()
 
+# def factorial(n):
+#   if n == 0:
+#     return 1
+#   else:
+#     return n * factorial(n-1)
+#
+#
+# x = int(input("Enter a number to do"))
+# print(factorial(x))
 
-from diceroller import rollDice
 
-print(rollDice(4,6))
+
+
+
