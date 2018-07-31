@@ -304,67 +304,6 @@
 
 
 
-
-
-
-
-
-
-
-# MY PROGRAMS ----------------------------------------------------------------------------------------------------------
-
-# Dice Roller
-# import random
-#
-#
-# def rollDice(sides):
-#     dice = random.randint(1, sides)
-#     print()
-#     print(f"--= [{dice}] =--")
-#     print()
-#     init(sides)
-#
-#
-# def init(sides):
-#     command = input("[R]oll the dice, [C]hange die or [Q]uit.")
-#     if command == 'r' or command == 'R':
-#         rollDice(sides)
-#     elif command == 'c' or command == 'C':
-#         print()
-#         choseSides()
-#     elif command == 'q' or command == 'Q':
-#         print("Thanks for using Dicey's Ultimate Dice Thrower.")
-#         quit()
-#     else:
-#         print()
-#         print("Invalid input. Try again.")
-#         print()
-#         init(sides)
-#
-#
-# def choseSides():
-#     try:
-#         sides = int(input("How many faces are on your die?"))
-#         if sides > 0:
-#             print()
-#             init(sides)
-#         else:
-#             print()
-#             print("Your (non-existent) die was eaten by a grue. You have lost.")
-#             quit()
-#     except ValueError:
-#         print()
-#         print("Invalid input. Sides must be an integer. Try again.")
-#         print()
-#         choseSides()
-#
-#
-#
-#
-#
-# print("Welcome to Dicey's Ultimate Dice Thrower.")
-# choseSides()
-
 # def factorial(n):
 #   if n == 0:
 #     return 1
@@ -376,6 +315,43 @@
 # print(factorial(x))
 
 
+import diceroller
 
+print("Welcome to the program. Be prepared for amazement.")
+while True:
+    print()
+    print()
+    progselect = input("You are inside the main loop. Program[1], program[2], program[3] or [Q]uit: ")
+    print()
+    print()
+    if progselect == '1':
+        while True:
+            print("You chose program 1. Enter 'back' at any point to return to the main program.")
+            print()
+            x = input("chose the number of dice: ")
+            if x == 'back':
+                break
+            y = input("chose the number of sides: ")
+            if y == 'back':
+                break
+            x = int(x)
+            y = int(y)
+            diceroller.rollDice(x,y)
+    elif progselect == '2':
+        while True:
+            print("You chose program 2.")
+            command = input("Type back to go back to the main program.")
+            if command == 'back':
+                break
+    elif progselect == '3':
+        while True:
+            print("You chose program 3.")
+            command = input("Type back to go back to the main program.")
+            if command == 'back':
+                break
+    elif progselect == 'q' or 'Q':
+        quit(1)
+    else:
+        continue
 
 

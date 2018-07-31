@@ -4,7 +4,7 @@ import random
 
 def rollDice(dice, sides):
     total = 0
-    if dice > 1 and sides > 1:
+    if dice >= 1 and sides >= 1:
         print(f"Rolling {dice}d{sides}...")
         for x in range(0, dice):
             die = random.randint(1, sides)
