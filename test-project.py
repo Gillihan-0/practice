@@ -315,7 +315,8 @@
 # print(factorial(x))
 
 
-import diceroller
+import diceroller, numberguesser
+
 
 print("Welcome to the program. Be prepared for amazement.")
 while True:
@@ -340,12 +341,16 @@ while True:
     elif progselect == '2':
         while True:
             print("You chose program 2.")
-            command = input("Type back to go back to the main program.")
-            if command == 'back':
+            print()
+            command = input("Proceed with number guesser? y/n: ")
+            if command == 'y':
+                numberguesser.guess()
+            else:
                 break
     elif progselect == '3':
         while True:
             print("You chose program 3.")
+            print()
             command = input("Type back to go back to the main program.")
             if command == 'back':
                 break
