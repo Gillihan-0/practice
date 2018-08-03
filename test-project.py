@@ -315,48 +315,96 @@
 # print(factorial(x))
 
 
-import diceroller, numberguesser
 
 
-print("Welcome to the program. Be prepared for amazement.")
-while True:
-    print()
-    print()
-    progselect = input("You are inside the main loop. Program[1], program[2], program[3] or [Q]uit: ")
-    print()
-    print()
-    if progselect == '1':
-        while True:
-            print("You chose program 1. Enter 'back' at any point to return to the main program.")
-            print()
-            x = input("chose the number of dice: ")
-            if x == 'back':
-                break
-            y = input("chose the number of sides: ")
-            if y == 'back':
-                break
-            x = int(x)
-            y = int(y)
-            diceroller.rollDice(x,y)
-    elif progselect == '2':
-        while True:
-            print("You chose program 2.")
-            print()
-            command = input("Proceed with number guesser? y/n: ")
-            if command == 'y':
-                numberguesser.guess()
-            else:
-                break
-    elif progselect == '3':
-        while True:
-            print("You chose program 3.")
-            print()
-            command = input("Type back to go back to the main program.")
-            if command == 'back':
-                break
-    elif progselect == 'q' or 'Q':
-        quit(1)
+
+#
+# import diceroller, numberguesser
+#
+#
+# print("Welcome to the program. Be prepared for amazement.")
+# while True:
+#     print()
+#     print()
+#     progselect = input("You are inside the main loop. Program[1], program[2], program[3] or [Q]uit: ")
+#     print()
+#     print()
+#     if progselect == '1':
+#         while True:
+#             print("You chose program 1. Enter 'back' at any point to return to the main program.")
+#             print()
+#             x = input("chose the number of dice: ")
+#             if x == 'back':
+#                 break
+#             y = input("chose the number of sides: ")
+#             if y == 'back':
+#                 break
+#             x = int(x)
+#             y = int(y)
+#             diceroller.rollDice(x,y)
+#
+#
+#     elif progselect == '2':
+#         while True:
+#             print("You chose program 2.")
+#             print()
+#             command = input("Proceed with number guesser? y/n: ")
+#             if command == 'y':
+#                 numberguesser.guess()
+#             else:
+#                 break
+#     elif progselect == '3':
+#         while True:
+#             print("You chose program 3.")
+#             print()
+#             command = input("Type back to go back to the main program.")
+#             if command == 'back':
+#                 break
+#     elif progselect == 'q' or 'Q':
+#         quit(1)
+#     else:
+#         continue
+
+
+# import random
+# while True:
+#     wordlist = ["cat", "dog", "mouse", "rat", "hat", "bat"]
+#     selector = random.randint(0,5)
+#     theword = wordlist[selector]
+#     print(f"your word is '{theword}'")
+#     choice = input("Enter a letter in the word: ")
+#
+#     while True:
+#         for i in theword:
+#             if choice == i:
+#                 print("You did it.")
+#                 break
+#         else:
+#             print("You managed to get it wrong. Try again.")
+#             break
+#         break
+
+s = 'steven was here'
+newthing = list(s)
+for c in range(len(newthing)):
+    if newthing[c].isalnum():
+        newthing[c] = "_"
     else:
-        continue
+        newthing[c] = " "
+while "_" in newthing:
+    guess = input("Guess a letter.")
+    if guess in s:
+        indexes = []
+        lastindex = -1
+        while True:
+            lastindex = s.find(guess, lastindex + 1)
+            if lastindex == -1:
+                break
+            indexes.append(lastindex)
+
+    print(indexes)
+    for i in indexes:
+        newthing[i] = guess
+    print(" ".join(newthing))
 
 
