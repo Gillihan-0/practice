@@ -1,6 +1,7 @@
 #number guesser
 import random
 
+
 def guess():
     while True:
         count = 0
@@ -35,8 +36,7 @@ def guess():
 
 if __name__ == "__main__":
 
-
     print("Hello and welcome to the random number guesser. Your job is to guess a randomly generated number between 1"
           " and 20.")
-    numberguesser()
+    guess()
 
